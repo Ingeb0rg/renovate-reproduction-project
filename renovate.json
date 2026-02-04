@@ -1,0 +1,51 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "ignorePaths": [
+    "**/packages/OldFrontend/**",
+    "**/packages/TestPackage/**",
+    "**/packages/Frontend2/**"
+  ],
+  "constraints": {
+    "php": "8.1.27",
+    "node": "22"
+  },
+  "packageRules": [
+    {
+      "description": "Disable MAJOR update types",
+      "matchUpdateTypes": ["major", "replacement"],
+      "enabled": false
+    },
+    {
+      "matchManagers": ["composer", "npm"],
+      "rangeStrategy": "update-lockfile"
+    },
+    {
+      "matchManagers": ["composer"],
+      "labels": ["dependencies", "composer"]
+    },
+    {
+      "matchManagers": ["npm"],
+      "labels": ["dependencies", "npm"]
+    },
+    {
+      "description": "Use Node 22 for root package.json",
+      "matchFileNames": ["package.json"],
+      "constraints": {
+        "node": "22"
+      }
+    },
+    {
+      "description": "Use Node 24 for Frontend1 package",
+      "matchFileNames": ["packages/Frontend1/**"],
+      "constraints": {
+        "node": "24"
+      }
+    }
+  ],
+  "minimumReleaseAge": "3 days",
+  "recreateWhen": "always",
+  "labels": ["dependencies"]
+}

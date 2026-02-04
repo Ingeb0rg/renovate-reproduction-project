@@ -1,0 +1,16 @@
+variables:
+  RENOVATE_REQUIRE_CONFIG: 'required'
+  RENOVATE_CONFIG_FILE: 'renovate.cjs'
+  GITHUB_COM_TOKEN: "${GITHUB_TOKEN_PAT}"
+  RENOVATE_TOKEN: "${RENOVATE_GITLAB_TOKEN}"
+  LOG_LEVEL: info
+
+renovate:
+  stage: renovate
+  dependencies: [ ]
+  needs: [ ]
+  image: renovate/renovate:latest
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule" && $SCHEDULE_NAME == "renovate"'
+  script:
+    - renovate
