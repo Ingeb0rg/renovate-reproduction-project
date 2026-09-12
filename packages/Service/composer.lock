@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "74458cefd0e96a1648e8700d54c44dd0",
+    "content-hash": "3e2cf4b897c34d2f3128fb8c1a475aaf",
     "packages": [
         {
             "name": "thecodingmachine/safe",
-            "version": "v1.2.1",
+            "version": "v1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thecodingmachine/safe.git",
-                "reference": "f781b93cbbfaed196f599534dcd3a1d69e89acaf"
+                "reference": "a8ab0876305a4cdaef31b2350fcb9811b5608dbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thecodingmachine/safe/zipball/f781b93cbbfaed196f599534dcd3a1d69e89acaf",
-                "reference": "f781b93cbbfaed196f599534dcd3a1d69e89acaf",
+                "url": "https://api.github.com/repos/thecodingmachine/safe/zipball/a8ab0876305a4cdaef31b2350fcb9811b5608dbc",
+                "reference": "a8ab0876305a4cdaef31b2350fcb9811b5608dbc",
                 "shasum": ""
             },
             "require": {
@@ -36,11 +36,16 @@
             },
             "autoload": {
                 "files": [
+                    "deprecated/apc.php",
+                    "deprecated/libevent.php",
+                    "deprecated/mssql.php",
+                    "deprecated/stats.php",
+                    "lib/special_cases.php",
                     "generated/apache.php",
-                    "generated/apc.php",
                     "generated/apcu.php",
                     "generated/array.php",
                     "generated/bzip2.php",
+                    "generated/calendar.php",
                     "generated/classobj.php",
                     "generated/com.php",
                     "generated/cubrid.php",
@@ -69,14 +74,12 @@
                     "generated/inotify.php",
                     "generated/json.php",
                     "generated/ldap.php",
-                    "generated/libevent.php",
                     "generated/libxml.php",
                     "generated/lzf.php",
                     "generated/mailparse.php",
                     "generated/mbstring.php",
                     "generated/misc.php",
                     "generated/msql.php",
-                    "generated/mssql.php",
                     "generated/mysql.php",
                     "generated/mysqli.php",
                     "generated/mysqlndMs.php",
@@ -108,7 +111,6 @@
                     "generated/sqlsrv.php",
                     "generated/ssdeep.php",
                     "generated/ssh2.php",
-                    "generated/stats.php",
                     "generated/stream.php",
                     "generated/strings.php",
                     "generated/swoole.php",
@@ -122,12 +124,12 @@
                     "generated/yaml.php",
                     "generated/yaz.php",
                     "generated/zip.php",
-                    "generated/zlib.php",
-                    "lib/special_cases.php"
+                    "generated/zlib.php"
                 ],
                 "psr-4": {
                     "Safe\\": [
                         "lib/",
+                        "deprecated/",
                         "generated/"
                     ]
                 }
@@ -139,9 +141,9 @@
             "description": "PHP core functions that throw exceptions instead of returning FALSE on error",
             "support": {
                 "issues": "https://github.com/thecodingmachine/safe/issues",
-                "source": "https://github.com/thecodingmachine/safe/tree/v1.2.1"
+                "source": "https://github.com/thecodingmachine/safe/tree/v1.3.3"
             },
-            "time": "2020-09-25T17:23:59+00:00"
+            "time": "2020-10-28T17:51:34+00:00"
         }
     ],
     "packages-dev": [],
